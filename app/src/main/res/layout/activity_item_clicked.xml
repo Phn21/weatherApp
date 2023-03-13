@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".itemClicked">
+    <RelativeLayout
+        android:id="@+id/relativeLItem"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/_20sdp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/todayItem"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_19ssp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/currentDateTVItem"
+            android:text="Current Date"
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_toRightOf="@+id/todayItem"
+            android:textSize="@dimen/_19ssp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/currentTemperatureTVItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/todayItem"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_65sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:text="21"
+            android:textSize="@dimen/_60ssp"/>
+
+
+        <ImageView
+            android:id="@+id/iconWeatherItem"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/ic_cloud"
+            android:layout_marginLeft="@dimen/_130sdp"
+            android:layout_marginTop="@dimen/_73sdp"
+            android:layout_alignTop="@id/todayItem"
+            android:layout_toEndOf="@id/todayItem"
+            />
+
+        <TextView
+            android:id="@+id/weatherTextTVItem"
+            android:layout_width="wrap_content"
+            android:text="Weather"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_toEndOf="@+id/todayItem"
+            android:layout_marginTop="@dimen/_165sdp"
+            android:layout_alignTop="@+id/todayItem"
+            android:layout_marginLeft="@dimen/_130sdp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/maxwind_kphTVItem"
+            android:layout_width="wrap_content"
+            android:text="Max Wind: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_toEndOf="@+id/todayItem"
+            android:layout_marginTop="@dimen/_225sdp"
+            android:layout_alignTop="@+id/todayItem"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/avghumidityItem"
+            android:layout_width="wrap_content"
+            android:text="Humidity AVG: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_toEndOf="@+id/todayItem"
+            android:layout_marginTop="@dimen/_265sdp"
+            android:layout_alignTop="@+id/todayItem"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/feelsLikeTVItem"
+            android:layout_width="wrap_content"
+            android:text="Feels Like: "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:layout_toEndOf="@+id/todayItem"
+            android:layout_marginTop="@dimen/_305sdp"
+            android:layout_alignTop="@+id/todayItem"
+            android:layout_marginLeft="@dimen/_1sdp"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

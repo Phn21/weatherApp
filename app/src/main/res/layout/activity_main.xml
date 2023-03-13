@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeL"
+            android:layout_width="match_parent"
+            android:background="#61C3F8"
+            android:padding="@dimen/_20sdp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/today"
+                android:text="Today, "
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textSize="@dimen/_19ssp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/currentDateTV"
+                android:text="Current Date"
+                android:textColor="@color/white"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/today"
+                android:textSize="@dimen/_19ssp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/currentTemperatureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/today"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:text="21"
+                android:textSize="@dimen/_40ssp"/>
+
+            <TextView
+                android:id="@+id/feelsLikeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/currentTemperatureTV"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_65sdp"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:text="21"
+                android:textSize="@dimen/_25ssp"/>
+
+            <ImageView
+                android:id="@+id/iconWeather"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/ic_cloud"
+                android:layout_marginLeft="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_alignTop="@id/today"
+                android:layout_toEndOf="@id/today"
+                />
+
+            <TextView
+                android:id="@+id/weatherTextTV"
+                android:layout_width="wrap_content"
+                android:text="Weather"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp"
+                android:layout_toEndOf="@+id/today"
+                android:layout_marginTop="@dimen/_95sdp"
+                android:layout_alignTop="@+id/today"
+                android:layout_marginLeft="@dimen/_80sdp"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
