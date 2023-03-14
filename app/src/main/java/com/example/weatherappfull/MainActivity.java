@@ -24,6 +24,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SwipeRefreshLayout swipeRefreshLayout;;
+        SwipeRefreshLayout swipeRefreshLayout;
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         currentDateTV = findViewById(R.id.currentDateTV);
         currentTemperatureTV = findViewById(R.id.currentTemperatureTV);
